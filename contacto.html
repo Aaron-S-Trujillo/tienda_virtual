@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Tienda Virtual</title>
+  <link rel="stylesheet" href="css/styles.css" hreflang="img">
+</head>
+<body>
+  <header>
+    <h1>Tienda Virtual de Ropa</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="hombres.html">Hombres</a>
+      <a href="mujeres.html">Mujeres</a>
+      <a href="accesorios.html">Accesorios</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <button id="cartBtn">🛒 Carrito (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <section class="hero">
+    <h2>Contáctanos</h2>
+    <p>Estamos aquí para ayudarte con tus pedidos y consultas.</p>
+  </section>
+
+  <section class="contacto">
+    <h2>Información de contacto</h2>
+    <p><strong>Teléfono / WhatsApp:</strong> 320 420 9769</p>
+    <p><strong>Email:</strong> aaronsantrujillop@gmail.com</p>
+
+    <h3>Métodos de pago disponibles</h3>
+    <ul>
+      <li>📱 Nequi: 320 420 9769</li>
+      <li>📱 Daviplata: 320 420 9769</li>
+      <li>💵 Efectivo contra entrega</li>
+    </ul>
+
+    <h3>Formulario de contacto</h3>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Modal del carrito -->
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Tu carrito</h2>
+      <ul id="cartList"></ul>
+      <p><strong>Total:</strong> $<span id="cartTotal">0</span></p>
+      <div class="cart-actions">
+        <button id="checkoutBtn">Finalizar compra</button>
+        <button id="closeCart">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de checkout con métodos de pago -->
+  <div id="checkoutModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Checkout</h2>
+      <input id="name" placeholder="Nombre completo">
+      <input id="email" type="email" placeholder="Email">
+      <textarea id="address" placeholder="Dirección completa"></textarea>
+
+      <h3>Forma de pago</h3>
+      <label><input type="radio" name="payment" value="nequi"> Nequi (320 420 9769)</label><br>
+      <label><input type="radio" name="payment" value="daviplata"> Daviplata (320 420 9769)</label><br>
+      <label><input type="radio" name="payment" value="efectivo"> Efectivo contra entrega</label><br>
+
+      <div class="cart-actions">
+        <button id="payBtn">Confirmar pedido</button>
+        <button id="closeCheckout">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tienda Virtual. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

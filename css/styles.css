@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('../img/banner.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+/* Base existente */
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+header { background: #111; color: white; padding: 20px; text-align: center; }
+nav a { color: white; margin: 0 15px; text-decoration: none; }
+.hero { background: url('../img/banner.jpg') center/cover no-repeat; color: white; text-align: center; padding: 80px 20px; }
+.grid { display: flex; gap: 20px; padding: 20px; justify-content: center; flex-wrap: wrap; }
+.producto { background: white; padding: 15px; border-radius: 8px; width: 250px; text-align: center; box-shadow: 0 3px 5px rgba(0,0,0,0.2); }
+.producto img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
+.producto button { background: #1f6feb; color: white; border: none; border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+
+/* Botón del carrito en header */
+#cartBtn { margin-left: 10px; background: #1f6feb; color: white; border: none; border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+
+/* Modales */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: flex; align-items: center; justify-content: center; }
+.hidden { display: none; }
+.modal-content { background: white; border-radius: 8px; padding: 16px; width: min(520px, 92vw); box-shadow: 0 6px 24px rgba(0,0,0,.2); }
+#cartList { list-style: none; padding: 0; margin: 0 0 12px; }
+#cartList li { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee; }
+.qty { display: flex; align-items: center; gap: 6px; }
+.qty button { padding: 4px 8px; }
+.cart-actions { display: flex; gap: 10px; justify-content: flex-end; }
+/* ===== Estilos de la sección de contacto ===== */
+.contacto {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: min(800px, 95%);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.contacto h2, .contacto h3 {
+  color: #1f6feb;
+  margin-bottom: 10px;
+}
+
+.contacto p, .contacto ul {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.contacto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto ul li {
+  background: #f4f4f4;
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* ===== Formulario de contacto ===== */
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.contacto input, .contacto textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.contacto textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contacto button {
+  background: #1f6feb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contacto button:hover {
+  background: #1554a8;
+}

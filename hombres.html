@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ropa para Hombres - Tienda Virtual</title>
+  <link rel="stylesheet" href="css/styles.css" hreflang="img">
+</head>
+<body>
+  <header>
+    <h1>Tienda Virtual de Ropa</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="hombres.html">Hombres</a>
+      <a href="mujeres.html">Mujeres</a>
+      <a href="accesorios.html">Accesorios</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <button id="cartBtn">🛒 Carrito (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <section class="hero">
+    <h2>Moda Masculina</h2>
+    <p>Encuentra las mejores prendas para hombres.</p>
+  </section>
+
+  <section class="productos">
+    <h2>Ropa para Hombres</h2>
+    <div class="grid">
+      <div class="producto" data-id="101" data-name="Camisa Casual Hombre" data-price="69900" data-image="img/camisa-hombre.jpg">
+        <img src="img/camisa-hombre.jpg" alt="Camisa casual hombre">
+        <h3>Camisa Casual</h3>
+        <p>$69.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+      <div class="producto" data-id="102" data-name="Pantalón Jeans Hombre" data-price="99900" data-image="img/jeans-hombre.jpg">
+        <img src="img/jeans-hombre.jpg" alt="Jeans hombre">
+        <h3>Jeans Clásicos</h3>
+        <p>$99.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+      <div class="producto" data-id="103" data-name="Chaqueta Hombre" data-price="149900" data-image="img/chaqueta-hombre.jpg">
+        <img src="img/chaqueta-hombre.jpg" alt="Chaqueta hombre">
+        <h3>Chaqueta Deportiva</h3>
+        <p>$149.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal del carrito -->
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Tu carrito</h2>
+      <ul id="cartList"></ul>
+      <p><strong>Total:</strong> $<span id="cartTotal">0</span></p>
+      <div class="cart-actions">
+        <button id="checkoutBtn">Finalizar compra</button>
+        <button id="closeCart">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de checkout con métodos de pago -->
+  <div id="checkoutModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Checkout</h2>
+      <input id="name" placeholder="Nombre completo">
+      <input id="email" type="email" placeholder="Email">
+      <textarea id="address" placeholder="Dirección completa"></textarea>
+
+      <h3>Forma de pago</h3>
+      <label><input type="radio" name="payment" value="nequi"> Nequi</label><br>
+      <label><input type="radio" name="payment" value="daviplata"> Daviplata</label><br>
+      <label><input type="radio" name="payment" value="efectivo"> Efectivo contra entrega</label><br>
+
+      <div class="cart-actions">
+        <button id="payBtn">Confirmar pedido</button>
+        <button id="closeCheckout">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tienda Virtual. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
