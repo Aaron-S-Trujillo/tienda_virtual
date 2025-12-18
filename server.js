@@ -1,65 +1,73 @@
 const express = require('express');
-const cors = require('cors');
 const mysql = require('mysql2');
-
+const path = require('path');
 const app = express();
 
-app.use(cors());
+// Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Conexión a MySQL
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Conexión a MySQL usando variables de Railway
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '', // tu contraseña si tienes
-  database: 'tienda_virtual'
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT
 });
 
-db.connect(err => {
+// Verificar conexión
+db.connect((err) => {
   if (err) {
-    console.error('Error al conectar a MySQL:', err);
+    console.error('Error conectando a MySQL:', err);
     return;
   }
-  console.log('Conectado a MySQL');
+  console.log('Conectado a MySQL en Railway');
 });
 
-// Registro de usuario
-app.post('/register', (req, res) => {
-  const { nombre, email, contrasenia } = req.body;
+// Ruta principal
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
-  const sql = 'INSERT INTO usuarios (nombre, email, contrasenia) VALUES (?, ?, ?)';
+// Registro de usuarios
+app.post('/registro', (req, res) => {
+  const { nombre, correo, contraseña } = req.body;
 
-  db.query(sql, [nombre, email, contrasenia], (err, result) => {
+  const query = 'INSERT INTO usuarios (nombre, correo, contraseña) VALUES (?, ?, ?)';
+  db.query(query, [nombre, correo, contraseña], (err, result) => {
     if (err) {
-      console.error('Error al registrar usuario:', err);
-      return res.json({ success: false, message: 'Error en el registro' });
+      console.error('Error registrando usuario:', err);
+      return res.status(500).json({ mensaje: 'Error en el registro' });
     }
-
-    res.json({ success: true, message: 'Usuario registrado correctamente' });
+    res.json({ mensaje: 'Usuario registrado correctamente' });
   });
 });
 
-// Inicio de sesión
+// Login de usuarios
 app.post('/login', (req, res) => {
-  const { email, contrasenia } = req.body;
+  const { correo, contraseña } = req.body;
 
-  const sql = 'SELECT * FROM usuarios WHERE email = ? AND contrasenia = ?';
-
-  db.query(sql, [email, contrasenia], (err, results) => {
+  const query = 'SELECT * FROM usuarios WHERE correo = ? AND contraseña = ?';
+  db.query(query, [correo, contraseña], (err, results) => {
     if (err) {
       console.error('Error en login:', err);
-      return res.json({ success: false });
+      return res.status(500).json({ mensaje: 'Error en el servidor' });
     }
 
     if (results.length > 0) {
-      res.json({ success: true });
+      res.json({ mensaje: 'Login exitoso' });
     } else {
-      res.json({ success: false });
+      res.status(401).json({ mensaje: 'Credenciales incorrectas' });
     }
   });
 });
 
-// Iniciar servidor
-app.listen(3000, () => {
-  console.log('Servidor corriendo en http://localhost:3000');
+// Puerto para Railway
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
