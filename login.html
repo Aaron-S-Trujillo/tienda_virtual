@@ -19,22 +19,27 @@
   </section>
 
   <script>
-    async function login() {
+    function login() {
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value.trim();
 
-      const res = await fetch('http://localhost:3000/login', {
-        method: 'POST',
-        headers: { 'Content-Type':'application/json' },
-        body: JSON.stringify({ email, password })
-      });
+      if (!email || !password) {
+        alert("Completa todos los campos");
+        return;
+      }
 
-      const data = await res.json();
-      alert(data.message || data.error);
+      // Obtener usuarios guardados en localStorage
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-      if (data.user) {
-        localStorage.setItem('user', JSON.stringify(data.user));
-        window.location.href = "index.html";
+      // Buscar usuario con email y contraseña correctos
+      const user = usuarios.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        alert("Inicio de sesión exitoso");
+        localStorage.setItem('user', JSON.stringify(user)); // Guardar sesión
+        window.location.href = "index.html"; // Redirigir a inicio
+      } else {
+        alert("Correo o contraseña incorrectos");
       }
     }
   </script>

@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Virtual - Ropa Moderna</title>
-  <link rel="stylesheet" href="css/styles.css" hreflang="img">
+  <title>Tienda Virtual de Ropa</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
@@ -20,35 +19,410 @@
   </header>
 
   <section class="hero">
-    <h2>Moda para todos los estilos</h2>
-    <p>Descubre las últimas tendencias.</p>
+    <h2>Bienvenido a nuestra tienda</h2>
+    <p>Encuentra moda para todos los estilos y ocasiones.</p>
   </section>
 
   <section class="productos">
-    <h2>Productos Destacados</h2>
-    <div class="grid" id="productGrid">
-      <!-- Cada producto con data-id para el carrito -->
-      <div class="producto" data-id="1" data-name="Camisa Moderna" data-price="59900" data-image="img/camisa.jpg">
-        <img src="img/camisa.jpg" alt="Camisa moderna">
-        <h3>Camisa Moderna</h3>
-        <p>$59.900</p>
+    <h2>Productos destacados</h2>
+    <div class="grid">
+      <div class="producto" data-id="1" data-name="Camisa Blanca" data-price="49900" data-image="img/camisa-blanca.jpg">
+        <img src="img/camisa-blanca.jpg" alt="Camisa blanca">
+        <h3>Camisa Blanca</h3>
+        <p>$49.900</p>
         <button class="addToCart">Añadir al carrito</button>
       </div>
-      <div class="producto" data-id="2" data-name="Pantalón Clásico" data-price="89900" data-image="img/pantalon.jpg">
-        <img src="img/pantalon.jpg" alt="Pantalón clásico">
-        <h3>Pantalón Clásico</h3>
+      <div class="producto" data-id="2" data-name="Pantalón Negro" data-price="79900" data-image="img/pantalon-negro.jpg">
+        <img src="img/pantalon-negro.jpg" alt="Pantalón negro">
+        <h3>Pantalón Negro</h3>
+        <p>$79.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+      <div class="producto" data-id="3" data-name="Vestido Rojo" data-price="119900" data-image="img/vestido-rojo.jpg">
+        <img src="img/vestido-rojo.jpg" alt="Vestido rojo">
+        <h3>Vestido Rojo</h3>
+        <p>$119.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+      
+      <!-- Producto 4 -->
+      <div class="producto" data-id="4" data-name="Camiseta Básica Gris" data-price="29900" data-image="img/camiseta-gris-basica.jpg">
+        <img src="img/camiseta-gris-basica.jpg" alt="Camiseta Básica Gris">
+        <h3>Camiseta Básica Gris</h3>
+        <p>$29.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto" data-id="5" data-name="Falda Plisada Negra" data-price="89900" data-image="img/falda-plisada-negra.jpg">
+        <img src="img/falda-plisada-negra.jpg" alt="Falda Plisada Negra">
+        <h3>Falda Plisada Negra</h3>
         <p>$89.900</p>
         <button class="addToCart">Añadir al carrito</button>
       </div>
-      <div class="producto" data-id="3" data-name="Chaqueta Deportiva" data-price="129900" data-image="img/chaqueta.jpg">
-        <img src="img/chaqueta.jpg" alt="Chaqueta deportiva">
-        <h3>Chaqueta Deportiva</h3>
+
+      <!-- Producto 6 -->
+      <div class="producto" data-id="6" data-name="Jeans Azul Clásico" data-price="99900" data-image="img/jeans-azul-clasico.jpg">
+        <img src="img/jeans-azul-clasico.jpg" alt="Jeans Azul Clásico">
+        <h3>Jeans Azul Clásico</h3>
+        <p>$99.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="producto" data-id="7" data-name="Blusa Blanca Boho" data-price="59900" data-image="img/blusa-blanca-boho.jpg">
+        <img src="img/blusa-blanca-boho.jpg" alt="Blusa Blanca Boho">
+        <h3>Blusa Blanca Boho</h3>
+        <p>$59.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="producto" data-id="8" data-name="Chaqueta Denim Ligera" data-price="149900" data-image="img/chaqueta-denim-ligera.jpg">
+        <img src="img/chaqueta-denim-ligera.jpg" alt="Chaqueta Denim Ligera">
+        <h3>Chaqueta Denim Ligera</h3>
+        <p>$149.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="producto" data-id="9" data-name="Camisa Cuadros Roja" data-price="54900" data-image="img/camisa-cuadros-roja.jpg">
+        <img src="img/camisa-cuadros-roja.jpg" alt="Camisa Cuadros Roja">
+        <h3>Camisa Cuadros Roja</h3>
+        <p>$54.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 10 -->
+      <div class="producto" data-id="10" data-name="Sudadera Gris Confort" data-price="89900" data-image="img/sudadera-gris-confort.jpg">
+        <img src="img/sudadera-gris-confort.jpg" alt="Sudadera Gris Confort">
+        <h3>Sudadera Gris Confort</h3>
+        <p>$89.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 11 -->
+      <div class="producto" data-id="11" data-name="Camiseta Negra Oversize" data-price="34900" data-image="img/camiseta-negra-oversize.jpg">
+        <img src="img/camiseta-negra-oversize.jpg" alt="Camiseta Negra Oversize">
+        <h3>Camiseta Negra Oversize</h3>
+        <p>$34.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 12 -->
+      <div class="producto" data-id="12" data-name="Pantalón Beige Chino" data-price="89900" data-image="img/pantalon-beige-chino.jpg">
+        <img src="img/pantalon-beige-chino.jpg" alt="Pantalón Beige Chino">
+        <h3>Pantalón Beige Chino</h3>
+        <p>$89.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 13 -->
+      <div class="producto" data-id="13" data-name="Vestido Negro Elegante" data-price="159900" data-image="img/vestido-negro-elegante.jpg">
+        <img src="img/vestido-negro-elegante.jpg" alt="Vestido Negro Elegante">
+        <h3>Vestido Negro Elegante</h3>
+        <p>$159.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 14 -->
+      <div class="producto" data-id="14" data-name="Blazer Azul Marino" data-price="189900" data-image="img/blazer-azul-marino.jpg">
+        <img src="img/blazer-azul-marino.jpg" alt="Blazer Azul Marino">
+        <h3>Blazer Azul Marino</h3>
+        <p>$189.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 15 -->
+      <div class="producto" data-id="15" data-name="Camisa Lino Beige" data-price="79900" data-image="img/camisa-lino-beige.jpg">
+        <img src="img/camisa-lino-beige.jpg" alt="Camisa Lino Beige">
+        <h3>Camisa Lino Beige</h3>
+        <p>$79.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 16 -->
+      <div class="producto" data-id="16" data-name="Top Deportivo Negro" data-price="39900" data-image="img/top-deportivo-negro.jpg">
+        <img src="img/top-deportivo-negro.jpg" alt="Top Deportivo Negro">
+        <h3>Top Deportivo Negro</h3>
+        <p>$39.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 17 -->
+      <div class="producto" data-id="17" data-name="Jogger Verde Oliva" data-price="74900" data-image="img/jogger-verde-oliva.jpg">
+        <img src="img/jogger-verde-oliva.jpg" alt="Jogger Verde Oliva">
+        <h3>Jogger Verde Oliva</h3>
+        <p>$74.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 18 -->
+      <div class="producto" data-id="18" data-name="Falda Denim Clara" data-price="69900" data-image="img/falda-denim-clara.jpg">
+        <img src="img/falda-denim-clara.jpg" alt="Falda Denim Clara">
+        <h3>Falda Denim Clara</h3>
+        <p>$69.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 19 -->
+      <div class="producto" data-id="19" data-name="Camiseta Blanca Logo" data-price="34900" data-image="img/camiseta-blanca-logo.jpg">
+        <img src="img/camiseta-blanca-logo.jpg" alt="Camiseta Blanca Logo">
+        <h3>Camiseta Blanca Logo</h3>
+        <p>$34.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 20 -->
+      <div class="producto" data-id="20" data-name="Chaqueta Rompevientos Azul" data-price="139900" data-image="img/chaqueta-rompevientos-azul.jpg">
+        <img src="img/chaqueta-rompevientos-azul.jpg" alt="Chaqueta Rompevientos Azul">
+        <h3>Chaqueta Rompevientos Azul</h3>
+        <p>$139.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 21 -->
+      <div class="producto" data-id="21" data-name="Camisa Negra Formal" data-price="89900" data-image="img/camisa-negra-formal.jpg">
+        <img src="img/camisa-negra-formal.jpg" alt="Camisa Negra Formal">
+        <h3>Camisa Negra Formal</h3>
+        <p>$89.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 22 -->
+      <div class="producto" data-id="22" data-name="Pantalón Gris Sastre" data-price="119900" data-image="img/pantalon-gris-sastre.jpg">
+        <img src="img/pantalon-gris-sastre.jpg" alt="Pantalón Gris Sastre">
+        <h3>Pantalón Gris Sastre</h3>
+        <p>$119.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 23 -->
+      <div class="producto" data-id="23" data-name="Vestido Floral Verano" data-price="99900" data-image="img/vestido-floral-verano.jpg">
+        <img src="img/vestido-floral-verano.jpg" alt="Vestido Floral Verano">
+        <h3>Vestido Floral Verano</h3>
+        <p>$99.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 24 -->
+      <div class="producto" data-id="24" data-name="Camiseta Verde Botánica" data-price="34900" data-image="img/camiseta-verde-botanica.jpg">
+        <img src="img/camiseta-verde-botanica.jpg" alt="Camiseta Verde Botánica">
+        <h3>Camiseta Verde Botánica</h3>
+        <p>$34.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 25 -->
+      <div class="producto" data-id="25" data-name="Falda Satinada Champagne" data-price="129900" data-image="img/falda-satinada-champagne.jpg">
+        <img src="img/falda-satinada-champagne.jpg" alt="Falda Satinada Champagne">
+        <h3>Falda Satinada Champagne</h3>
         <p>$129.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 26 -->
+      <div class="producto" data-id="26" data-name="Jeans Rotos Oscuros" data-price="109900" data-image="img/jeans-rotos-oscuros.jpg">
+        <img src="img/jeans-rotos-oscuros.jpg" alt="Jeans Rotos Oscuros">
+        <h3>Jeans Rotos Oscuros</h3>
+        <p>$109.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 27 -->
+      <div class="producto" data-id="27" data-name="Blusa Manga Globo" data-price="69900" data-image="img/blusa-manga-globo.jpg">
+        <img src="img/blusa-manga-globo.jpg" alt="Blusa Manga Globo">
+        <h3>Blusa Manga Globo</h3>
+        <p>$69.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 28 -->
+      <div class="producto" data-id="28" data-name="Chaqueta Cuero Sintético" data-price="199900" data-image="img/chaqueta-cuero-sintetico.jpg">
+        <img src="img/chaqueta-cuero-sintetico.jpg" alt="Chaqueta Cuero Sintético">
+        <h3>Chaqueta Cuero Sintético</h3>
+        <p>$199.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 29 -->
+      <div class="producto" data-id="29" data-name="Camiseta Azul Marino" data-price="34900" data-image="img/camiseta-azul-marino.jpg">
+        <img src="img/camiseta-azul-marino.jpg" alt="Camiseta Azul Marino">
+        <h3>Camiseta Azul Marino</h3>
+        <p>$34.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 30 -->
+      <div class="producto" data-id="30" data-name="Sudadera Verde Bosque" data-price="89900" data-image="img/sudadera-verde-bosque.jpg">
+        <img src="img/sudadera-verde-bosque.jpg" alt="Sudadera Verde Bosque">
+        <h3>Sudadera Verde Bosque</h3>
+        <p>$89.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 31 -->
+      <div class="producto" data-id="31" data-name="Camisa Rayas Azules" data-price="57900" data-image="img/camisa-rayas-azules.jpg">
+        <img src="img/camisa-rayas-azules.jpg" alt="Camisa Rayas Azules">
+        <h3>Camisa Rayas Azules</h3>
+        <p>$57.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 32 -->
+      <div class="producto" data-id="32" data-name="Pantalón Cargo Arena" data-price="99900" data-image="img/pantalon-cargo-arena.jpg">
+        <img src="img/pantalon-cargo-arena.jpg" alt="Pantalón Cargo Arena">
+        <h3>Pantalón Cargo Arena</h3>
+        <p>$99.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 33 -->
+      <div class="producto" data-id="33" data-name="Vestido Verde Esmeralda" data-price="139900" data-image="img/vestido-verde-esmeralda.jpg">
+        <img src="img/vestido-verde-esmeralda.jpg" alt="Vestido Verde Esmeralda">
+        <h3>Vestido Verde Esmeralda</h3>
+        <p>$139.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 34 -->
+      <div class="producto" data-id="34" data-name="Blusa Encaje Marfil" data-price="79900" data-image="img/blusa-encaje-marfil.jpg">
+        <img src="img/blusa-encaje-marfil.jpg" alt="Blusa Encaje Marfil">
+        <h3>Blusa Encaje Marfil</h3>
+        <p>$79.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 35 -->
+      <div class="producto" data-id="35" data-name="Chaqueta Puffer Negra" data-price="219900" data-image="img/chaqueta-puffer-negra.jpg">
+        <img src="img/chaqueta-puffer-negra.jpg" alt="Chaqueta Puffer Negra">
+        <h3>Chaqueta Puffer Negra</h3>
+        <p>$219.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 36 -->
+      <div class="producto" data-id="36" data-name="Camiseta Rosa Pastel" data-price="32900" data-image="img/camiseta-rosa-pastel.jpg">
+        <img src="img/camiseta-rosa-pastel.jpg" alt="Camiseta Rosa Pastel">
+        <h3>Camiseta Rosa Pastel</h3>
+        <p>$32.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 37 -->
+      <div class="producto" data-id="37" data-name="Jogger Negro Urbano" data-price="79900" data-image="img/jogger-negro-urbano.jpg">
+        <img src="img/jogger-negro-urbano.jpg" alt="Jogger Negro Urbano">
+        <h3>Jogger Negro Urbano</h3>
+        <p>$79.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 38 -->
+      <div class="producto" data-id="38" data-name="Falda Lápiz Gris" data-price="99900" data-image="img/falda-lapiz-gris.jpg">
+        <img src="img/falda-lapiz-gris.jpg" alt="Falda Lápiz Gris">
+        <h3>Falda Lápiz Gris</h3>
+        <p>$99.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 39 -->
+      <div class="producto" data-id="39" data-name="Camisa Azul Claro" data-price="59900" data-image="img/camisa-azul-claro.jpg">
+        <img src="img/camisa-azul-claro.jpg" alt="Camisa Azul Claro">
+        <h3>Camisa Azul Claro</h3>
+        <p>$59.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 40 -->
+      <div class="producto" data-id="40" data-name="Sudadera Blanca Minimal" data-price="94900" data-image="img/sudadera-blanca-minimal.jpg">
+        <img src="img/sudadera-blanca-minimal.jpg" alt="Sudadera Blanca Minimal">
+        <h3>Sudadera Blanca Minimal</h3>
+        <p>$94.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 41 -->
+      <div class="producto" data-id="41" data-name="Camiseta Estampada Retro" data-price="38900" data-image="img/camiseta-estampada-retro.jpg">
+        <img src="img/camiseta-estampada-retro.jpg" alt="Camiseta Estampada Retro">
+        <h3>Camiseta Estampada Retro</h3>
+        <p>$38.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 42 -->
+      <div class="producto" data-id="42" data-name="Pantalón Blanco Verano" data-price="89900" data-image="img/pantalon-blanco-verano.jpg">
+        <img src="img/pantalon-blanco-verano.jpg" alt="Pantalón Blanco Verano">
+        <h3>Pantalón Blanco Verano</h3>
+        <p>$89.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 43 -->
+      <div class="producto" data-id="43" data-name="Vestido Azul Marino" data-price="129900" data-image="img/vestido-azul-marino.jpg">
+        <img src="img/vestido-azul-marino.jpg" alt="Vestido Azul Marino">
+        <h3>Vestido Azul Marino</h3>
+        <p>$129.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 44 -->
+      <div class="producto" data-id="44" data-name="Blusa Seda Rosa" data-price="99900" data-image="img/blusa-seda-rosa.jpg">
+        <img src="img/blusa-seda-rosa.jpg" alt="Blusa Seda Rosa">
+        <h3>Blusa Seda Rosa</h3>
+        <p>$99.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 45 -->
+      <div class="producto" data-id="45" data-name="Chaqueta Parka Verde" data-price="229900" data-image="img/chaqueta-parka-verde.jpg">
+        <img src="img/chaqueta-parka-verde.jpg" alt="Chaqueta Parka Verde">
+        <h3>Chaqueta Parka Verde</h3>
+        <p>$229.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 46 -->
+      <div class="producto" data-id="46" data-name="Camiseta Amarilla Sol" data-price="32900" data-image="img/camiseta-amarilla-sol.jpg">
+        <img src="img/camiseta-amarilla-sol.jpg" alt="Camiseta Amarilla Sol">
+        <h3>Camiseta Amarilla Sol</h3>
+        <p>$32.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 47 -->
+      <div class="producto" data-id="47" data-name="Jogger Gris Suave" data-price="75900" data-image="img/jogger-gris-suave.jpg">
+        <img src="img/jogger-gris-suave.jpg" alt="Jogger Gris Suave">
+        <h3>Jogger Gris Suave</h3>
+        <p>$75.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 48 -->
+      <div class="producto" data-id="48" data-name="Falda Roja Tabla" data-price="89900" data-image="img/falda-roja-tabla.jpg">
+        <img src="img/falda-roja-tabla.jpg" alt="Falda Roja Tabla">
+        <h3>Falda Roja Tabla</h3>
+        <p>$89.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 49 -->
+      <div class="producto" data-id="49" data-name="Camisa Verde Botones" data-price="57900" data-image="img/camisa-verde-botones.jpg">
+        <img src="img/camisa-verde-botones.jpg" alt="Camisa Verde Botones">
+        <h3>Camisa Verde Botones</h3>
+        <p>$57.900</p>
+        <button class="addToCart">Añadir al carrito</button>
+      </div>
+
+      <!-- Producto 50 -->
+      <div class="producto" data-id="50" data-name="Sudadera Negra Premium" data-price="119900" data-image="img/sudadera-negra-premium.jpg">
+        <img src="img/sudadera-negra-premium.jpg" alt="Sudadera Negra Premium">
+        <h3>Sudadera Negra Premium</h3>
+        <p>$119.900</p>
         <button class="addToCart">Añadir al carrito</button>
       </div>
     </div>
   </section>
-
+  
   <!-- Modal del carrito -->
   <div id="cartModal" class="modal hidden">
     <div class="modal-content">
@@ -62,15 +436,24 @@
     </div>
   </div>
 
-  <!-- Modal de checkout simple -->
+  <!-- Modal de checkout -->
   <div id="checkoutModal" class="modal hidden">
     <div class="modal-content">
       <h2>Checkout</h2>
+      <label for="name">Nombre completo</label>
       <input id="name" placeholder="Nombre completo">
+      <label for="email">Email</label>
       <input id="email" type="email" placeholder="Email">
+      <label for="address">Dirección completa</label>
       <textarea id="address" placeholder="Dirección completa"></textarea>
+
+      <h3>Forma de pago</h3>
+      <label><input type="radio" name="payment" value="nequi"> Nequi</label><br>
+      <label><input type="radio" name="payment" value="daviplata"> Daviplata</label><br>
+      <label><input type="radio" name="payment" value="efectivo"> Efectivo contra entrega</label><br>
+
       <div class="cart-actions">
-        <button id="payBtn">Pagar (simulado)</button>
+        <button id="payBtn">Confirmar pedido</button>
         <button id="closeCheckout">Cerrar</button>
       </div>
     </div>

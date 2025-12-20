@@ -20,23 +20,32 @@
   </section>
 
   <script>
-    async function register() {
+    function register() {
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value.trim();
 
-      const res = await fetch('http://localhost:3000/register', {
-        method: 'POST',
-        headers: { 'Content-Type':'application/json' },
-        body: JSON.stringify({ name, email, password })
-      });
-
-      const data = await res.json();
-      alert(data.message || data.error);
-
-      if (data.message) {
-        window.location.href = "login.html";
+      if (!name || !email || !password) {
+        alert("Completa todos los campos");
+        return;
       }
+
+      // Obtener usuarios existentes de localStorage
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+      // Verificar si el correo ya existe
+      const existe = usuarios.find(u => u.email === email);
+      if (existe) {
+        alert("Ya existe una cuenta con este correo");
+        return;
+      }
+
+      // Agregar nuevo usuario
+      usuarios.push({ name, email, password });
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+      alert("Usuario registrado correctamente");
+      window.location.href = "login.html"; // Redirigir al login
     }
   </script>
 

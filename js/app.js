@@ -31,6 +31,12 @@ function renderCart() {
   list.innerHTML = '';
   let total = 0;
 
+  if (!cart.length) {
+    list.innerHTML = '<li>Tu carrito está vacío</li>';
+    $('#cartTotal').textContent = "0";
+    return;
+  }
+
   cart.forEach(item => {
     total += item.price * item.qty;
     const li = document.createElement('li');
@@ -87,16 +93,34 @@ function init() {
       email: $('#email').value.trim(),
       address: $('#address').value.trim(),
     };
+
     if (!customer.name || !customer.email || !customer.address) {
       alert('Completa todos los datos');
       return;
     }
+
     if (!cart.length) {
       alert('Tu carrito está vacío');
       return;
     }
+
+    // Validar usuario logueado
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      alert('Debes iniciar sesión para comprar');
+      return;
+    }
+
+    // Validar método de pago
+    const payment = document.querySelector('input[name="payment"]:checked');
+    if (!payment) {
+      alert('Selecciona un método de pago');
+      return;
+    }
+
     const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    alert(`Gracias, ${customer.name}. Pedido creado por $${total.toLocaleString('es-CO')} (simulado).`);
+    alert(`Gracias, ${customer.name}. Pedido creado por $${total.toLocaleString('es-CO')} usando ${payment.value}. (simulado)`);
+
     cart = [];
     saveCart();
     toggleModal('#checkoutModal', false);
@@ -105,7 +129,6 @@ function init() {
 
   // Inicial
   saveCart();
-  renderCart();
 }
 
 document.addEventListener('DOMContentLoaded', init);
